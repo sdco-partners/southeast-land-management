@@ -1,0 +1,19 @@
+{
+  "name": "southeast-land-management",
+  "version": "1.0.0",
+  "description": "Southeast Land Mgmt",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdco-partners/southeast-land-management.git"
+  },
+  "author": "SDCO Partners",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdco-partners/southeast-land-management/issues"
+  },
+  "homepage": "https://github.com/sdco-partners/southeast-land-management#readme"
+}

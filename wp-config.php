@@ -21,13 +21,13 @@ if (file_exists(dirname(__FILE__) . '/local-config.php')) {
 
 // Global DB config
 if (!defined('DB_NAME')) {
-	define('DB_NAME', 'slm_prod11');
+	define('DB_NAME', 'dummy');
 }
 if (!defined('DB_USER')) {
-	define('DB_USER', 'slm_admin14');
+	define('DB_USER', 'dummy');
 }
 if (!defined('DB_PASSWORD')) {
-	define('DB_PASSWORD', 'trouble');
+	define('DB_PASSWORD', 'dummy');
 }
 if (!defined('DB_HOST')) {
 	define('DB_HOST', 'localhost');
