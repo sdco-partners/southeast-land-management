@@ -54,7 +54,7 @@ gulp.task('uglify', function() {
 		.pipe(plumber(plumberErrorHandler))
 		.pipe(concat('scripts-min.js'))
 	  .pipe(uglify())
-	  .pipe(gulp.dest(paths.dest));
+	  .pipe(gulp.dest(paths.dest))
 	  .pipe(livereload());
 });
 
