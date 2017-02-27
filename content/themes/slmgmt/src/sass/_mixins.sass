@@ -9,14 +9,18 @@ $break-small: 500px
   @media(min-width: #{$break-xlarge})
     @content
 
-=medium
+=large
   @media(min-width: #{$break-medium})
     @content
 
-=min
+=medium
   @media(min-width: #{$break-small})
     @content
 
+=tiny
+  @media(max-width: #{$break-small})
+    @content
+    
 
 /* Flexbox */
 
@@ -25,13 +29,6 @@ $break-small: 500px
   justify-content: $j
   align-items: $a
   flex-wrap: $f
-
-
-/* Margins 10% */
-
-=marg($m: 10%)
-  margin-left: $m
-  margin-right: $m 
 
 
 /* BROWSER DETECTION  */
