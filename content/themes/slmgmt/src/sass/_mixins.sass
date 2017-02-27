@@ -1,0 +1,42 @@
+/* Media Breakpoints & Mixins */
+
+$break-xlarge: 1280px
+$break-large: 1024px
+$break-medium: 850px
+$break-small: 500px
+
+=max 
+  @media(min-width: #{$break-xlarge})
+    @content
+
+=medium
+  @media(min-width: #{$break-medium})
+    @content
+
+=min
+  @media(min-width: #{$break-small})
+    @content
+
+
+/* Flexbox */
+
+=flex($d: flex, $j: space-between, $a: flex-start, $f: wrap)
+  display: $d
+  justify-content: $j
+  align-items: $a
+  flex-wrap: $f
+
+
+/* Margins 10% */
+
+=marg($m: 10%)
+  margin-left: $m
+  margin-right: $m 
+
+
+/* BROWSER DETECTION  */
+
+=browser($browsers: Mozilla)
+  @each $browser in $browsers
+    html[data-browser*="#{$browser}"] &
+      @content

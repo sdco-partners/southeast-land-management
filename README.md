@@ -50,7 +50,6 @@ Southeast Land Management. Copyright 2017 SDCO Partners
     --\js
     | 
     --\sass
-
 -- 404.php
 -- footer.php
 -- function.php

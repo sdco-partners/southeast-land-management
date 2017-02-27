@@ -77,7 +77,7 @@ $table_prefix  = 'slm_';
  * Change this to localize WordPress. A corresponding MO file for the chosen
  * language must be installed to wp-content/languages. For example, install
  * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
- * language support.
+ * language support.clr
  */
 define('WPLANG', '');
 
@@ -87,17 +87,21 @@ define('WPLANG', '');
  *
  * These are required because wordpress is installed in a subdirectory.
  */
+
+$local_path = '10.1.10.96/southeast-land-management';
+// $_SERVER['SERVER_NAME']
+
 if (!defined('WP_SITEURL')) {
-	define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
+	define('WP_SITEURL', 'http://' . $local_path . '/wordpress');
 }
 if (!defined('WP_HOME')) {
-	define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME'] . '');
+	define('WP_HOME',    'http://' . $local_path . '');
 }
 if (!defined('WP_CONTENT_DIR')) {
 	define('WP_CONTENT_DIR', dirname(__FILE__) . '/content');
 }
 if (!defined('WP_CONTENT_URL')) {
-	define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/content');
+	define('WP_CONTENT_URL', 'http://' . $local_path . '/content');
 }
 
 
