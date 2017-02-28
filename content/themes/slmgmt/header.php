@@ -18,6 +18,7 @@
 <script type="text/javascript">
 	document.documentElement.setAttribute("data-browser", navigator.userAgent);
 </script>
+<script src="//localhost:35729/livereload.js"></script>
 
 
 <head>
@@ -29,3 +30,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<!-- ==== Section: Header ==== -->
+<header>
+  <?php get_template_part('components/head'); ?>
+</header>

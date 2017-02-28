@@ -14,7 +14,19 @@
 
   get_header(); ?>
 
+<!-- ==== Section: Main ==== -->
+<section id="main">
+  <?php get_template_part('components/main'); ?> 
+</section>
 
-  
+<!-- ==== Section: Short Bio ==== -->
+<section id="bio">
+  <?php get_template_part('components/bio'); ?>    
+</section>
 
-  <?php get_footer();
+<!-- ==== Section: Map ==== -->
+<section id="map">
+  <?php get_template_part('components/map'); ?>
+</section>
+
+<?php get_footer();

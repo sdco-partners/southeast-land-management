@@ -14,6 +14,10 @@
 
 ?>
 
+<!-- ==== Section: Footer ==== -->
+<section id="footer">
+  <?php get_template_part('components/foot'); ?>
+</section>
 
 </body><!-- end -->
 </html>

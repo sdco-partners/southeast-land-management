@@ -15,6 +15,7 @@ var uri = './content/themes/slmgmt/';
 var paths = {
 	scss: uri.concat('src/sass/**/*.sass'),
 	styles: uri.concat('src/sass/styles.sass'),
+	php: uri.concat('**/*.php'),
 	js: uri.concat('src/js/**/*.js'),
 	src: uri.concat('src/js'),
 	dest: uri.concat('prod/')
@@ -61,6 +62,7 @@ gulp.task('uglify', function() {
 // Watch task
 gulp.task('default', function() {
 	livereload.listen();
+	gulp.watch(paths.php, livereload.reload);
 	gulp.watch(paths.scss, ['styles']);
 	gulp.watch(paths.js, ['uglify']);
 	gulp.watch(paths.dest, ['minify']);
