@@ -10,10 +10,9 @@
   	Southeast Land Management
   </h1>
   <div id="hamburger">
-    Hamburger
+    <?php echo file_get_contents($GLOBALS['url']."/assets/hamburger.svg"); ?>
   </div>
 </div>
-
 <div id="slide-menu">
   <ul>
     <li>About</li>

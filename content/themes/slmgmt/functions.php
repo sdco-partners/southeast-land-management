@@ -21,13 +21,10 @@
 
 
 	function my_enqueue_style() {
+    
+    wp_enqueue_style('typography', 'https://cloud.typography.com/778678/7975772/css/fonts.css');
 
-		// <script type="text/javascript" src="//fast.fonts.net/jsapi/8cd2f97e-4a17-4a9f-8e26-eaa420c86031.js"></script>
-
-	  // wp_enqueue_script('cloud.typography', 'https://fast.fonts.net/jsapi/8cd2f97e-4a17-4a9f-8e26-eaa420c86031.js');
-    // wp_enqueue_style('typography', 'https://cloud.typography.com/778678/7975772/css/fonts.css');
-
-    // wp_enqueue_style('webtype', 'http://cloud.webtype.com/css/c7d7a6d5-4e15-4b27-bbae-3849f98e1ac4.css');
+    wp_enqueue_style('webtype', 'http://cloud.webtype.com/css/c7d7a6d5-4e15-4b27-bbae-3849f98e1ac4.css');
 
 		wp_enqueue_style('styles', $GLOBALS['url'].'/prod/styles.css');
 

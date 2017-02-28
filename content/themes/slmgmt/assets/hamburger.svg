@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.36 24.7">
+	<defs>
+		<style>
+			.ham-cls1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}
+		</style>
+	</defs>
+	<line id="ham-03" class="ham-cls1" y1="1" x2="44.36" y2="1"/>
+	<line id="ham-02" class="ham-cls1" y1="12.35" x2="44.36" y2="12.35"/>
+	<line id="ham-01" class="ham-cls1" y1="23.7" x2="44.36" y2="23.7"/>
+</svg>
