@@ -14,7 +14,8 @@
 <div class="arrow down">
 </div>
 <div id="sldr-albert">
-  <img id="sa-1" class="albert" 
-    src="<?php echo $GLOBALS['url']."/assets/sldr-albert-04.png" ?>" 
-    alt="">
+  <div id="sa-1" class="albert"></div>
+  <div id="sa-2" class="albert"></div>
+  <div id="sa-3" class="albert"></div>
+  <div id="sa-4" class="albert"></div>
 </div>
