@@ -12,14 +12,22 @@
 
   > .image
     flex: 0 0 50vw
+    height: 100%
     overflow: hidden
 
   > .copy
     flex: 0 0 calc(50vw - 20%)
     padding: 10%
 
-.underline  
-  border-bottom: 1px solid $site-white
+
+    > p
+      width: 350px
+
+    > a
+      display: block
+      padding-top: 30px
+
+
 
 
 
@@ -31,5 +39,17 @@
   background-color: $site-darkgrey
   
   > .image
-    background
+    +img
+    background-image: url('#{$uri}/assets/img-01.png')
 
+  > .copy
+
+    > a 
+      color: $site-red
+      font-size: $font-sx2
+
+
+
+
+.underline  
+  border-bottom: 1px solid $site-white
