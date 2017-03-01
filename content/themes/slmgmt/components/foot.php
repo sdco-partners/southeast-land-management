@@ -28,7 +28,9 @@
   </div>
 </div>
 <div id="contact">
-  <img class="" src="" alt="">
+  <div id="email">
+    <?php echo file_get_contents($GLOBALS['url']."/assets/mail.svg"); ?>
+  </div>
   <div id="terms">
     <p>Private Policy</p>
     <p>Terms of use</p>

@@ -29,4 +29,15 @@
   <?php get_template_part('components/map'); ?>
 </section>
 
+<?php
+
+  /**
+  *  Console Logs
+  * 
+  * echo "<script>console.log('".$GLOBALS['maps'].", outputs map');</script>";
+  */  
+
+
+?>
+
 <?php get_footer();

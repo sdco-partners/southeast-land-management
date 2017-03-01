@@ -12,6 +12,8 @@
  * @version 1.0
  */
 
+  include 'config.php';
+
 	/* Define Variables  */
 	$GLOBALS['url'] = get_template_directory_uri();
 

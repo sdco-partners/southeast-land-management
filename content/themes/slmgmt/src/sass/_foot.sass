@@ -1,0 +1,61 @@
+/*  _foot.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#foot
+  height: 200px
+
+
+#addresses
+  +flex(flex, flex-start, flex-start, wrap)
+  padding-top: 50px
+  padding-left: 50px
+
+  > .col-1
+    flex: 0 0 auto
+
+  > .col-2
+    flex: 0 0 auto
+    margin-left: 30px
+
+#contact
+  +flex
+  padding-top: 25px
+  padding-left: 50px
+  padding-right: 50px
+
+  #email
+    width: 25px
+    height: 20px
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#foot
+  background-color: $site-lightgrey 
+
+#addresses
+  font-size: $font-sx4
+  line-height: 2em
+
+  h1 
+    color: $site-white
+
+  address
+    @extend .font-sweet-m
+    color: $site-darkgrey
+    text-transform: uppercase
+    letter-spacing: 0.08em
+
+#terms
+  font-size: $font-sx4
+  text-transform: uppercase
+
+  > p
+    @extend .font-sweet-m
+    color: $site-darkgrey
+

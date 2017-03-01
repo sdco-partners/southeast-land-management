@@ -71,3 +71,5 @@ content/wp-cache-config.php
 # ignore BIG files
 *.mp4
 
+# ignore config
+content/themes/slmgmt/config.php
