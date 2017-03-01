@@ -30,10 +30,17 @@ $break-small: 500px
   align-items: $a
   flex-wrap: $f
 
+/* Background Image Settings */
+=img($r: no-repeat, $p: center, $s: cover)
+  background-repeat: $r
+  background-position: $p
+  background-size: $s
 
-/* BROWSER DETECTION  */
+
+/* Browser Detection  */
 
 =browser($browsers: Mozilla)
   @each $browser in $browsers
     html[data-browser*="#{$browser}"] &
       @content
+
