@@ -8,10 +8,10 @@
 function initMap() {
   
   // Define Vocab
-	var content;
 	var marker;
 	var position;
 	var bounds = new google.maps.LatLngBounds();
+	var content = new google.maps.InfoWindow(), marker, i;
 	var options = {
     zoom: 6,
     center: {lat: mapData[0]['lat'], lng: mapData[0]['long']},
@@ -37,12 +37,6 @@ function initMap() {
     // add position to the boundaries of map
     position = new google.maps.LatLng(mapData[i]['lat'],mapData[i]['long']);
     bounds.extend(position);
-    
-    // add infowindow to marker
-	  content = new google.maps.InfoWindow({
-	    content: mapData[i]['content'],
-	    pixelOffset: new google.maps.Size(-13, 0)
-	  });
      
     // add marker 
 	  marker = new google.maps.Marker({
@@ -54,7 +48,7 @@ function initMap() {
     // add click event to markers
 	  google.maps.event.addListener(marker, 'click', (function(marker, i){
 	  	return function() {
-	  		content.setContent(content)
+	  		content.setContent(mapData[i]['content']);
 	  		content.open(map, marker);
 	  	}
 	  })(marker, i))
