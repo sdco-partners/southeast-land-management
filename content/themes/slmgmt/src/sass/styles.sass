@@ -8,20 +8,16 @@
 
 /* SITE CONTEXT -> Global styles */
 
-h1
-
-
-h2
-
-
-h3
-
-
-h4
-
+h1, h2, h3, h5
+  @extend .font-sweet-m
+  text-transform: uppercase
+  letter-spacing: 0.1em
 
 p
- 
+  @extend .font-goth-b
+  line-height: 1.5em
+  letter-spacing: 0.05em
+  color: $site-white
 
 html 
 
@@ -30,9 +26,13 @@ body
 
 
 img
+  width: 100%
 
 
 @import 'head'
 
+@import 'main'
+
+@import 'bio'
 
 /* Global classes extended */

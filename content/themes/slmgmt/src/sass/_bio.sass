@@ -1,0 +1,32 @@
+/*  _bio.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#bio
+  +flex
+  width: 100vw
+  height: 800px
+  overflow: hidden
+
+  > img
+    flex: 0 0 50vw
+    overflow: hidden
+
+  > .copy
+    flex: 0 0 calc(50vw - 20%)
+    padding: 10%
+
+.underline  
+  border-bottom: 1px solid $site-white
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#bio
+  background-color: $site-darkgrey
+

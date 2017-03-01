@@ -1,0 +1,50 @@
+/* _main.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#main
+  width: 100vw
+  height: 400px
+
+  h1
+    margin-top: 200px
+    margin-left: 12%
+
+  h2
+    margin-top: 6px
+    margin-left: 12%
+    width: 740px
+  
+
+#sldr-albert
+  +flex(flex, space-between, flex-start, nowrap)
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw
+  height: 650px
+  margin-top: -50px
+  overflow: hidden
+  z-index: -1
+
+  .albert
+    flex: 0 0 100%
+    align-self: center
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+#main
+
+  h1
+    font-size: $font-bx3
+    color: $site-red
+
+  h2
+    font-size: $font-bx2
+    color: $site-white
+    line-height: 1.4em
