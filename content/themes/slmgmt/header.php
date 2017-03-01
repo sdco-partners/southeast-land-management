@@ -21,9 +21,6 @@
 
 <script src="//localhost:35729/livereload.js"></script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo $GLOBALS['maps']; ?>&callback=initMap"></script>
-
-
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">

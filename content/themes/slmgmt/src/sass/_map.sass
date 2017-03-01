@@ -8,7 +8,16 @@
   width: 100%
   height: 900px
 
-/* OBJECTS -> For styling objects */
+#google-map
+  width: 100%
+  height: 900px
+
+.pin-1
+  height: 40px
+  width: 20px
+
+
+/* OBJECTS -> For styling objects */ 
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4 */
 
@@ -16,3 +25,11 @@
 #map
   +img
   background-image: url(#{$uri}/assets/map-dummy.png)
+  border-top: 10px solid $site-darkgrey
+  border-bottom: 10px solid $site-darkgrey
+
+.info-window
+  @extend .font-sweet-m
+  color: $site-darkgrey
+  text-transform: uppercase
+  font-size: $font-sx2

@@ -14,23 +14,23 @@
 
   include 'config.php';
 
-	/* Define Variables  */
-	$GLOBALS['url'] = get_template_directory_uri();
+  /* Define Variables  */
+  $GLOBALS['url'] = get_template_directory_uri();
 
 
 
-	/* Add Styles, Fonts, and Javascript */
+  /* Add Styles, Fonts, and Javascript */
 
 
-	function my_enqueue_style() {
+  function my_enqueue_style() {
     
     wp_enqueue_style('typography', 'https://cloud.typography.com/778678/7975772/css/fonts.css');
 
     wp_enqueue_style('webtype', 'http://cloud.webtype.com/css/c7d7a6d5-4e15-4b27-bbae-3849f98e1ac4.css');
 
-		wp_enqueue_style('styles', $GLOBALS['url'].'/prod/styles.css');
+    wp_enqueue_style('styles', $GLOBALS['url'].'/prod/styles.css');
 
-		wp_enqueue_script('scripts-min', $GLOBALS['url'].'/prod/scripts-min.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('scripts-min', $GLOBALS['url'].'/prod/scripts-min.js', array('jquery'), '1.0.0', true);
 
   }
 
@@ -53,6 +53,6 @@
 
   function isMobile() {
     return preg_match("/(android|webos|avantgo|iphone|ipad|ipod|blackbe‌​rry|iemobile|bolt|bo‌​ost|cricket|docomo|f‌​one|hiptop|mini|oper‌​a mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|‌​webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-	}
+  }
 
 ?>
