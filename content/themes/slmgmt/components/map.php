@@ -6,6 +6,6 @@
 ?>
 <div id="google-map"></div>
 
-<script async defer 
+<script defer 
   src="https://maps.googleapis.com/maps/api/js?key=<?php echo $GLOBALS['maps']; ?>&callback=initMap">
 </script>

@@ -16,7 +16,7 @@ function initMap() {
     zoom: 6,
     center: {lat: mapData[0]['lat'], lng: mapData[0]['long']},
     disableDoubleClickZoom: true,
-    draggable: false,
+    draggable: true,
     scrollwheel: false,
     panControl: false,
     mapTypeControl: false,
