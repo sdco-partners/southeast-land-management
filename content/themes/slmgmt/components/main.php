@@ -12,6 +12,7 @@
   Overseeing a 19,000 acre land portfolio in dynamic, growing markets.
 </h2>
 <div class="arrow down">
+  <?php echo file_get_contents($GLOBALS['url']."/assets/arrow.svg"); ?>
 </div>
 <div id="sldr-albert">
   <div id="sa-1" class="albert"></div>

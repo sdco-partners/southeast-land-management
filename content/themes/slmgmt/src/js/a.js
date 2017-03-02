@@ -1,7 +1,8 @@
 /**
 *
-* To Initiate jQuery no conflict
+* A is for Airplane
 *
 */
 
 $j = jQuery.noConflict();
+

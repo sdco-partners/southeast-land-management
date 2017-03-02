@@ -5,7 +5,7 @@
 * Code to initiate and control Google Maps API
 */
 
-function initMap() {
+var initMap = function() {
   
   // Define Vocab
 	var marker;
