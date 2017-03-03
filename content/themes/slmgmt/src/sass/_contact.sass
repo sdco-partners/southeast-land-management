@@ -1,0 +1,40 @@
+/*  _contact.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#contact
+  +flex
+  padding-top: 200px
+  padding-left: 15%
+  padding-right: 15%
+  margin: 0 auto
+
+  p
+    padding-top: 20px
+    margin-top: 40px
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#contact
+  background-color: $site-darkgrey
+
+  h1
+    @extend .font-chron-di
+    text-transform: none
+    color: $site-white
+    font-size: $font-bx2
+
+  p
+    color: $site-red
+    border-top: 2px solid $site-red
+
+    > svg
+      width: 50px
+      height: 33.31px
+      
+      #mail
+        fill: $site-red 

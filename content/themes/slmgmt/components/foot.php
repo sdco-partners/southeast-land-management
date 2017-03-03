@@ -5,7 +5,7 @@
 
 ?>
 
-<div id="addresses">
+<div id="biz-address">
   <div class="col-1">
     <h1>
       Charlotte
@@ -27,7 +27,7 @@
     </address>
   </div>
 </div>
-<div id="contact">
+<div id="biz-contact">
   <div id="email">
     <?php echo file_get_contents($GLOBALS['url']."/assets/mail.svg"); ?>
   </div>

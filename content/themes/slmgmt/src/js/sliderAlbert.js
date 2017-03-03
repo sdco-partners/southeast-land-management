@@ -58,5 +58,8 @@ var autoSlide = function(){
 }
 
 // Trigger Function
-setTimeout(autoSlide, 4000);
+if( $j( '#sldr-albert' ).length ) {
+  setTimeout(autoSlide, 4000);
+  
+}
 

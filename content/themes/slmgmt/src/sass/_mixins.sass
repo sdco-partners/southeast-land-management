@@ -44,3 +44,13 @@ $break-small: 500px
     html[data-browser*="#{$browser}"] &
       @content
 
+/* Placeholder */
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
