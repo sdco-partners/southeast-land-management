@@ -4,7 +4,19 @@
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
+#biography
+  +flex(flex, center, center, wrp)
+  padding: 50px 10% 200px
 
+#arrow-left, #arrow-right
+  flex: 0 0 auto
+  padding-left: 80px
+  padding-right: 80px
+  width: 40px
+  height: 40px
+
+#writeups
+  flex: 0 0 50%
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -12,3 +24,20 @@
 
 #biography
   background-color: $site-darkgrey
+
+#arrow-right
+  transform: rotate(270deg)
+
+#arrow-left
+  transform: rotate(90deg)
+
+#writeups
+
+  .writeup
+    display: none
+
+  #writeup-melton
+    display: block
+
+  p
+    font-size: $font-sx1

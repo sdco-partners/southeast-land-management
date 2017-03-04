@@ -4,7 +4,22 @@
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
+#directory
+  +flex(flex, flex-start, flex-start, wrap)
+  padding-left: 10%
+  padding-right: 10%
+  padding-top: 40px
 
+.list
+  flex: 0 0 calc(25% - 50px)
+  margin-right: 50px 
+  margin-bottom: 25px
+
+  h2
+    padding-top: 15px
+
+  p
+    padding-top: 5px
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -12,3 +27,27 @@
 
 #directory
   background-color: $site-darkgrey
+
+.list
+
+  &:hover
+    
+    h2
+      color: $site-red
+
+    p 
+      color: $site-red
+
+  h2
+    font-size: $font-sx1
+    color: $site-white
+    border-top: 2px solid $site-red
+    transition: color 0.3s
+
+
+  p 
+    font-size: $font-sx3
+    text-transform: uppercase
+    transition: color 0.3s
+
+
