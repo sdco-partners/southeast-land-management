@@ -4,11 +4,35 @@
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
+#explore
+  padding-top: 25vw
+  padding-left: 10vw
+  width: 100%
+  height: 40vw
 
+  h2
+    width: 700px
+
+  p
+    margin-top: 10px
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 #explore
+  +img
   background-color: $site-darkgrey
+  background-image: url(#{$uri}/assets/img-02.png)
+
+  h2
+    color: $site-white
+    font-size: $font-bx2
+    line-height: 1.5em
+
+  p
+    color: $site-red
+    font-size: $font-sx3
+    letter-spacing: 0.1em
+    text-transform: uppercase
+
