@@ -1,0 +1,29 @@
+<?php
+/*
+ * Template Name: About
+ */
+
+  get_header(); ?>
+
+<!-- ==== Section: Medals ==== -->
+<section id="medals">
+  <?php get_template_part('components/medals'); ?>
+</section>
+
+<!-- ==== Section: Directory ==== -->
+<section id="directory" id="melton">
+  <?php get_template_part('components/directory'); ?>
+</section>
+
+<!-- ==== Section: Biography ==== -->
+<section id="biography">
+  <?php get_template_part('components/biography'); ?>
+</section>
+
+<!-- ==== Section: Explore ==== -->
+<section id="explore">
+  <?php get_template_part('components/explore'); ?>
+</section>
+
+
+<?php get_footer();
