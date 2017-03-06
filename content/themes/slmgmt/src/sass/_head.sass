@@ -27,6 +27,16 @@
     width: 40px
     height: 22px
 
+#close
+  position: absolute
+  top: 0
+  right: 0
+  margin-top: 10px
+  margin-right: 37px
+  
+  svg
+    width: 25px
+    height: 28px
 
 #nav-bg
   width: 100%
@@ -35,6 +45,20 @@
 
 #slide-menu
   display: none
+  position: fixed
+  top: 0
+  right: -80vw
+  width: 80vw
+  height: 100vh
+  z-index: 100
+
+  ul
+    margin-left: 75px
+    margin-top: 30vh
+
+  li
+    margin-top: 40px
+
 
 
 /* OBJECTS -> For styling objects */
@@ -43,8 +67,30 @@
 
 #nav
   background-color: rgba(0, 0, 0, 0.5)
-  color: $site-white
   
   #nav-name
     font-size: $font-sx3
     opacity: 1
+
+    a 
+      color: $site-white
+      transition: color 0.3s
+
+      &:hover
+        color: $site-red
+
+#slide-menu
+  background-color: rgba(0, 0, 0, 0.8)
+
+  ul li
+    @extend .font-sweet-m
+    font-size: $font-bx3
+    letter-spacing: 0.1em
+    text-transform: uppercase
+
+    a 
+      color: $site-white
+      transition: color 0.3s
+
+      &:hover
+        color: $site-red      

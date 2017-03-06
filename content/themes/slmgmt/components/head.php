@@ -7,16 +7,19 @@
 
 <div id="nav">
   <h1 id="nav-name">
-  	Southeast Land Management
+  	<a href="<?php echo $GLOBALS['root']; ?>">Southeast Land Management</a>
   </h1>
-  <div id="hamburger">
+  <a href="" id="hamburger">
     <?php echo file_get_contents($GLOBALS['url']."/assets/hamburger.svg"); ?>
-  </div>
+  </a>
 </div>
 <div id="slide-menu">
   <ul>
-    <li>About</li>
-    <li>Communities</li>
-    <li>Contact</li>
+    <li><a href="<?php echo $GLOBALS['url']; ?>/about">About</a></li>
+    <li><a href="<?php echo $GLOBALS['url']; ?>/communities">Communities</a></li>
+    <li><a href="<?php echo $GLOBALS['url']; ?>/contact">Contact</a></li>
   </ul>
+  <div id="close">
+    <?php echo file_get_contents($GLOBALS['url']."/assets/close.svg"); ?>
+  </div>
 </div>
