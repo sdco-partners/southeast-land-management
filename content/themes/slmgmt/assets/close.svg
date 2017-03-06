@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.78 32.78">
 	<defs>
 		<style>
-			.close-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}
+			.close-cls1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}
 		</style>
 	</defs>
-	<line id="close-2" class="close-1" x1="0.71" y1="0.71" x2="32.08" y2="32.08"/>
-	<line id="close-1" class="close-1" x1="0.71" y1="32.08" x2="32.08" y2="0.71"/>
+	<line id="close-2" class="close-cls1" x1="0.71" y1="0.71" x2="32.08" y2="32.08"/>
+	<line id="close-1" class="close-cls1" x1="0.71" y1="32.08" x2="32.08" y2="0.71"/>
 </svg>
