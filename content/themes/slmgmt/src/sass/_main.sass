@@ -6,16 +6,19 @@
 
 #main
   width: 100vw
-  height: 700px
+  height: 100vh
 
   h1
-    padding-top: 200px
+    padding-top: 40vh
     margin-left: 12%
 
   h2
     margin-top: 6px
     margin-left: 12%
-    width: 740px
+    max-width: 500px
+
+    +medium
+      width: 740px
 
   .arrow
     margin-top: 10px
@@ -28,14 +31,24 @@
   top: 0
   left: 0
   width: 100vw
-  height: 800px
-  margin-top: -50px
+  height: 100vh
+  // margin-top: -50px
   overflow: hidden
   z-index: -1
 
   .albert
+    display: none
     flex: 1 0 100%
     height: 100%
+
+#albert-down
+
+  &:hover 
+    .arrow-1
+      fill: $site-red
+
+  .arrow-1
+    transition: fill 0.3s
 
 
 /* OBJECTS -> For styling objsects */
@@ -45,13 +58,20 @@
 #main
 
   h1
-    font-size: $font-bx3
+    font-size: $font-bx2
     color: $site-red
+    line-height: 1.4em
+
+    +medium
+      font-size: $font-bx3
 
   h2
-    font-size: $font-bx2
+    font-size: $font-sx1
     color: $site-white
     line-height: 1.4em
+
+    +medium
+      font-size: $font-bx2
 
 
 #sa-1, #sa-2, #sa-3, #sa-4

@@ -11,7 +11,7 @@
 <h2>
   Overseeing a 19,000 acre land portfolio in dynamic, growing markets.
 </h2>
-<div class="arrow down">
+<div class="arrow down" id="albert-down">
   <?php echo file_get_contents($GLOBALS['url']."/assets/arrow.svg"); ?>
 </div>
 <div id="sldr-albert">

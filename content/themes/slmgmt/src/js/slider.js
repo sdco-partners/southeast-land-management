@@ -62,8 +62,10 @@ Slider.autoPlay = function(callback){
     // Call Slide function
     this.counter++
     this.slideFxn();
-
-    callback();
+    
+    if ( callback ) {
+      callback();
+    }
     // Recursively call Autoplay
     setTimeout(this.autoPlay.bind(this, callback), this.pauseTime);
 
