@@ -5,20 +5,30 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 #foot
-  height: 200px
+  height: 100%
+  padding-bottom: 40px
+
+  +medium
+    height: 200px
 
 
 #biz-address
   +flex(flex, flex-start, flex-start, wrap)
   padding-top: 50px
   padding-left: 50px
+  
 
   > .col-1
     flex: 0 0 auto
 
   > .col-2
-    flex: 0 0 auto
-    margin-left: 30px
+    flex: 0 0 100%
+    margin-top: 30px
+
+    +tiny
+      flex: 0 0 auto
+      margin-top: 0
+      margin-left: 30px
 
 #biz-contact
   +flex
@@ -50,6 +60,16 @@
     color: $site-darkgrey
     text-transform: uppercase
     letter-spacing: 0.08em
+
+
+#biz-contact 
+  #email
+    &:hover
+      .mail-cls-1
+        fill: $site-white
+
+    .mail-cls-1
+      transition: fill 0.3s
 
 #terms
   font-size: $font-sx4

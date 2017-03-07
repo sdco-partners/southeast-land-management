@@ -20,5 +20,9 @@
 </div>
 <div class="cols">
   <h1>Reach Out</h1>
-  <p><?php echo file_get_contents($GLOBALS['url']."/assets/mail.svg"); ?></p>
+  <p id="email-2">
+      <a href="mailto:info@southstreetpartners.com" alt="mail">
+        <?php echo file_get_contents($GLOBALS['url']."/assets/mail.svg"); ?>
+      </a>
+  </p>
 </div>

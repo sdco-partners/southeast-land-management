@@ -7,21 +7,27 @@
 #bio
   +flex
   width: 100vw
-  height: 800px
+  height: 100%
   overflow: hidden
 
+  +medium
+    height: 800px
+
   > .image
-    flex: 0 0 50vw
-    height: 100%
+    flex: 0 0 100vw
+    height: 400px
     overflow: hidden
 
+    +medium
+      flex: 0 0 50vw
+      height: 100%
+
   > .copy
-    flex: 0 0 calc(50vw - 20%)
+    flex: 0 0 calc(100vw - 20%)
     padding: 10%
 
-
-    > p
-      max-width: 350px
+    +medium
+      flex: 0 0 calc(50vw - 20%)
 
     > a
       display: block

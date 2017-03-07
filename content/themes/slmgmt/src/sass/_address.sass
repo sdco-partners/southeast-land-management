@@ -5,11 +5,30 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 #contact
-  +flex
-  padding-top: 200px
+  +flex(flex, center, center, wrap)
+  flex-direction: column
+  padding-top: 40px
   padding-left: 15%
   padding-right: 15%
   margin: 0 auto
+
+  +medium 
+    align-items: flex-start
+    flex-direction: row
+    padding-top: 20vh
+
+  .cols
+    flex: 1 0 100%
+    margin-top: 60px
+    margin-left: 0
+    margin-right: 0
+    width: 80vw
+
+    +medium
+      flex: 0 0 calc(33.33% - 40px)
+      margin-top: 0
+      margin-left: 20px
+      margin-right: 20px
 
   p
     padding-top: 20px
@@ -32,9 +51,12 @@
     color: $site-red
     border-top: 2px solid $site-red
 
-    > svg
-      width: 50px
-      height: 33.31px
-      
-      #mail
-        fill: $site-red 
+  #mail
+    fill: $site-red
+
+#email-2
+
+  svg  
+    width: 50px 
+    height: 33.31px 
+

@@ -17,8 +17,8 @@ var mapData = [
      '<p class="info-window">Broker: NAI Southern Real Estate</p>'+
      '</div>'
   },{
-   lat: 30,
-   long: -88,
+   lat: 33,
+   long: -95.2,
    label: 'B',
    content: '<div id="content">'+
      '<p class="info-window">Bartholomew Road - Howell Road LLC</p>'+
@@ -47,8 +47,8 @@ var mapData = [
      '<p class="info-window">Broker: NAI Southern Real Estate</p>'+
      '</div>'	
   },{
-   lat: 26,
-   long: -102,
+   lat: 36.5,
+   long: -93.6,
    label: 'E',
    content: '<div id="content">'+
      '<p class="info-window">Edward Road - Howell Road LLC</p>'+
@@ -57,8 +57,8 @@ var mapData = [
      '<p class="info-window">Broker: NAI Southern Real Estate</p>'+
      '</div>'	
   },{
-   lat: 30,
-   long: -97,
+   lat: 34,
+   long: -92.5,
    label: 'F',
    content: '<div id="content">'+
      '<p class="info-window">Franco Road - Howell Road LLC</p>'+

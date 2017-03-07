@@ -5,11 +5,17 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 #properties
-  height: 300px
+  height: 100%
   padding: 100px
 
+  +medium
+    height: 300px
+
   > div
-    column-count: 5
+    column-count: 2
+
+    +medium
+      column-count: 5
 
   ul li
     padding-top: 5px 
@@ -25,7 +31,7 @@
 #properties
   
   h1 
-    color: $site-darkgrey
+    color: $site-red
     font-size: $font-sx1
 
   ul li 

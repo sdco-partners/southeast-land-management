@@ -7,11 +7,14 @@
 #explore
   padding-top: 25vw
   padding-left: 10vw
-  width: 100%
+  width: 90vw
   height: 40vw
 
   h2
-    width: 700px
+    width: 80vw
+
+    +medium
+      width: 700px
 
   p
     margin-top: 10px
@@ -27,12 +30,20 @@
 
   h2
     color: $site-white
-    font-size: $font-bx2
+    font-size: $font-sx1
     line-height: 1.5em
 
+    +medium
+      font-size: $font-bx2
+
   p
-    color: $site-red
-    font-size: $font-sx3
-    letter-spacing: 0.1em
-    text-transform: uppercase
+    a
+      color: $site-red
+      font-size: $font-sx3
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      transition: all 0.3s
+
+      &:hover
+        color: $site-white
 

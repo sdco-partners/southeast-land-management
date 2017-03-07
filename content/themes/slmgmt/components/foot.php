@@ -29,7 +29,7 @@
 </div>
 <div id="biz-contact">
   <div id="email">
-    <?php echo file_get_contents($GLOBALS['url']."/assets/mail.svg"); ?>
+    <a href="mailto:info@southstreetpartners.com" alt="mail"><?php echo file_get_contents($GLOBALS['url']."/assets/mail.svg"); ?></a>
   </div>
   <div id="terms">
     <p>Private Policy</p>

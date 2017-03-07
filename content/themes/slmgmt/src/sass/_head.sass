@@ -47,14 +47,18 @@
   display: none
   position: fixed
   top: 0
-  right: -80vw
-  width: 80vw
+  right: -100vw
+  width: 100vw
   height: 100vh
   z-index: 100
 
+  +medium
+    right: -80vw
+    width: 80vw
+
   ul
     margin-left: 75px
-    margin-top: 30vh
+    margin-top: 20vh
 
   li
     margin-top: 40px
@@ -84,9 +88,12 @@
 
   ul li
     @extend .font-sweet-m
-    font-size: $font-bx3
+    font-size: $font-bx2
     letter-spacing: 0.1em
     text-transform: uppercase
+
+    +medium
+      font-size: $font-bx3
 
     a 
       color: $site-white

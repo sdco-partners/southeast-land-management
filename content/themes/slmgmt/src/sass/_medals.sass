@@ -11,7 +11,10 @@
 
   > p 
     margin: 0 auto
-    width: 700px
+    width: 80vw
+
+    +medium
+      width: 700px
 
   > a
     display: block
@@ -26,10 +29,14 @@
   background-color: $site-darkgrey
   
   > p 
-    font-size: $font-bx2
+    font-size: $font-sx1
     letter-spacing: 0.1em
     text-align: center
     text-transform: uppercase
+
+    +medium
+      font-size: $font-bx2
+
 
   > a
     font-size: $font-sx2

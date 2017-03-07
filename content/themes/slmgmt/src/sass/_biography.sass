@@ -5,33 +5,50 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 #biography
-  +flex(flex, center, center, wrp)
-  padding: 50px 10% 200px
+  +flex(flex, center, center, nowrap)
+  padding: 50px 0 200px
+
+  +medium
+    padding: 50px 10% 200px
 
 #arrow-left, #arrow-right
   flex: 0 0 auto
   width: 40px
   height: 40px
-
-  .arrow-1
-    transition: fill 0.3s
+  margin-bottom: 200px
+  
+  +medium
+    margin-bottom: 0
   
   &:hover
 
     .arrow-1
       fill: $site-red
+
+  .arrow-1
+    transition: fill 0.3s
   
 
 #arrow-left
-  padding-right: 130px
+  padding-right: 0
+
+  +medium
+    padding-right: 130px
 
 #arrow-right
-  padding-left: 130px
+  padding-left: 0
+
+  +medium
+    padding-left: 130px
 
 #writeups
-  flex: 0 0 50%
+  flex: 0 0 80vw
   +flex(flex, space-between, flex-start, nowrap)
   overflow: hidden
+
+  +medium
+    flex: 0 0 50%
+
 
   .writeup
     flex: 0 0 calc(100% - 40px)
