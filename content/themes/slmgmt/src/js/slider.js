@@ -20,6 +20,15 @@ var Slider = {
   clicked: false,
 }
 
+// Toggles this.clicked 
+Slider.toggle = function(){
+  if (this.clicked) {
+    this.clicked = false;
+  } else {
+    this.clicked = true;
+  }
+}
+
 // Main slide engine
 Slider.slideFxn = function(){
 
@@ -47,55 +56,56 @@ Slider.slideFxn = function(){
 }  
 
 // Autoplay 
-Slider.autoPlay = function(){
-
+Slider.autoPlay = function(callback){
   // If not clicked
   if ( !this.clicked ) {
     // Call Slide function
     this.counter++
     this.slideFxn();
 
+    callback();
     // Recursively call Autoplay
-    setTimeout(this.autoPlay.bind(this), this.pauseTime);
+    setTimeout(this.autoPlay.bind(this, callback), this.pauseTime);
 
   // Else, check back in 10 seconds.  
   } else  {
-    setTimeout(this.autoPlay.bind(this), this.pauseTime);
+    setTimeout(this.autoPlay.bind(this, callback), this.pauseTime);
   }
 }
 
 // Triggers Slider
-Slider.start = function(delay){
+Slider.start = function(delay, callback){
   if ( this.$( this.parent ).length ) {
-    setTimeout(this.autoPlay(), delay);
+    setTimeout(this.autoPlay.bind(this, callback), delay);
   }
 }
 
 // Overrides autoplay and manually moves slide
 Slider.moveSlide = function(){
-	this.$( '#next' ).on( 'click', function(){
-	  this.clicked = true;
 
-	  // Call Slide function
-	  this.slideFxn();
-	  
-	  // Reset clicked in 4 secs
-	  setInterval(function(){
-	    this.clicked = false;
-	  }, 4000);
+  // toggle clicked
+  Slider.toggle();
 
-	});
+  // Call Slide function
+  this.slideFxn();
+  
+  // Reset clicked in 4 secs
+  setInterval(this.toggle.bind(this), 4000);
+
 }
 
 // increases count
-Slider.next = function(){
+Slider.next = function(callback){
 	  this.counter++;
+    callback();
 	  this.moveSlide();
 }
 
 // decreases count
-Slider.prev = function(){
+Slider.prev = function(callback){
   this.counter--;
+  callback();
   this.moveSlide();
 }
+
 
