@@ -5,7 +5,5 @@
 
 ?>
 
-<p>
-  32The SSP Southeast Land Management team is diversely qualified in development, investment, acquisition, management, and strategy. 
-</p>
-<a href="">Meet the team</a>
+<p><?php echo get_field('medals_copy', 11); ?></p>
+<div id='medals-cta'><?php echo get_field('medals_cta', 11); ?></div>

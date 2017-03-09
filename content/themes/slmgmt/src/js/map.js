@@ -26,7 +26,7 @@ var initMap = function() {
 	var icon = {
 	  url: "http://10.1.10.96/southeast-land-management/content/themes/slmgmt/assets/pin.png",
 	  origin: new google.maps.Point(0,0),
-	  anchor: new google.maps.Point(0,0)
+	  anchor: new google.maps.Point(0,52)
 	}
   
   // Initialize Map

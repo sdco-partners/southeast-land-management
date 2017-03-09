@@ -20,7 +20,7 @@ sliderBradley.duration = 1000;
 
 
 // Start slider
-sliderBradley.start(4000, highlightText);
+// sliderBradley.start(4000, highlightText);
 
 // next & prev
 $j( "#arrow-right" ).on('click', function(){
