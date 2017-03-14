@@ -5,8 +5,11 @@
 */
 
 $j = jQuery.noConflict();
+var uri = window.location.pathname
+var home = "/southeast-land-management/"
 
 $j(document).ready(function(){
+
   
   albert.pickRandomSlide();
 
@@ -23,7 +26,11 @@ $j(document).ready(function(){
   $j( '#albert-down' ).on('click', scrollDown);
   
   $j( '#click-about' ).on('click', function(e){
-  	e.preventDefault();
+    if (uri === home ) {
+      console.log('default prevented', uri, home);
+      e.preventDefault();
+    }
+    console.log('defaulted', uri, home);
   	scrollDown();
   	close();
   });

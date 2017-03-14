@@ -7,7 +7,7 @@
 
 <div>
 
-	<h1>Charlotte</h1>
+	<!-- <h1>Charlotte</h1>
 	<ul>
 		<li>Albemarle</li>
 		<li>Allision Creek</li>
@@ -71,6 +71,6 @@
 	<h1>Austin</h1>
 	<ul>
 	  <li>Ronald Reagan</li>
-	</ul>
+	</ul> -->
 
 </div>

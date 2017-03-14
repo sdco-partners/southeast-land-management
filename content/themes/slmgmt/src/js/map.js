@@ -5,12 +5,17 @@
 * Starts Async read file
 */
 
-var initMap = function() {
+var initMap = function(data) {
   
   // Define Variables
-  var mapDataLoc = window.location.origin + '/southeast-land-management/content/themes/slmgmt/prod/mapData.json';
+  var mapDataLoc = home + '/content/themes/slmgmt/prod/mapData.json';
+  
+  if (data) {
+    
+  } else {
+    getMapData(mapDataLoc, plotMapData);
+  }
 
-  getMapData(mapDataLoc, plotMapData);
    
 }
 
@@ -52,7 +57,7 @@ var plotMapData = function (mapData) {
   var marker;
   var bounds = new google.maps.LatLngBounds();
   var content = new google.maps.InfoWindow(), marker, i;
-  var pinImgLoc = window.location.origin + "/southeast-land-management/content/themes/slmgmt/assets/pin.png";
+  var pinImgLoc = home + "/content/themes/slmgmt/assets/pin.png";
   var options = {
     zoom: 6,
     center: {lat: 35.243094, lng: -80.604347},
@@ -111,7 +116,6 @@ var plotMapData = function (mapData) {
 */
 
 var buildContentString = function(data){
-  console.log('data: ', data)
   var content = '<div id="content">';
   content += '<p class="info-window">' + data['title'] + '</p>';
   content += '<p class="info-window">Acres: ' + data['marker_acres'] + ' Parcel: ID ' + data['marker_parcel'] + '</p>';

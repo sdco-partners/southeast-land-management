@@ -17,7 +17,7 @@ var open = function(){
 var close = function() {
 	$j( '#slide-menu' )
 	  .animate({
-	  	right: '-80vw'
+	  	right: '-100vw'
 	  })
     .fadeOut(250);
   $j( '#nav' ).fadeIn(250);

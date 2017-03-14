@@ -5,7 +5,7 @@
 * Functionality for text slider Bradley
 */
 
-function highlightText(){
+var highlightText = function(){
 	  $j( '.list' ).children().removeAttr('style');
 		$j( '#li-' + sliderBradley.counter ).children().css('color', '#EF4136');
 }
