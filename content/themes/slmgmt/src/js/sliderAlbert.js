@@ -5,13 +5,6 @@
 * Functionality for image slider Albert 
 */
 
-// var sliderAlbert = Object.create(Slider);
-// sliderAlbert.parent = '#sldr-albert';
-// sliderAlbert.children = '#sa';
-// sliderAlbert.$ = jQuery.noConflict();
-
-// sliderAlbert.start(4000);
-
 
 albert = {}
 
@@ -19,7 +12,8 @@ albert = {}
 albert.scaleIn = function(random) {
 	$j( '#sa-' + random ).fadeIn(1500, function(){
 		$j( '#sa-' + random ).css({
-			"transform": "scale(1.2)",
+			// "transform": "scale(1.4)",
+			"transform-origin": "1cm 3px",
 			"transition": "all 10s"
 		}); 
 	});
