@@ -21,8 +21,7 @@ albert.scaleIn = function(random) {
 		$j( '#sa-' + random ).css({
 			"transform": "scale(1.2)",
 			"transition": "all 10s"
-		}) 
-		console.log(random, 'random number from random slider');
+		}); 
 	});
 }
 

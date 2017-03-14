@@ -2,10 +2,10 @@
 *
 * Map Data
 *
-* Data to populate Google Maps
+* hardcoded dummy Data to populate Google Maps
 */
 
-var mapData = [
+var dummyMapData = [
   {
    lat: 35.243094,
    long: -80.604347,

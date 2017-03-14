@@ -3,7 +3,10 @@
  * Template Name: About
  */
 
-  get_header(); ?>
+  get_header(); 
+
+  $img = get_field('explore_photo', 11);
+?>
 
 <!-- ==== Section: Medals ==== -->
 <section id="medals">
@@ -21,7 +24,8 @@
 </section>
 
 <!-- ==== Section: Explore ==== -->
-<section id="explore">
+<section id="explore"
+  style="background-image: url(<?php echo $img['url']; ?>)">
   <?php get_template_part('components/explore'); ?>
 </section>
 

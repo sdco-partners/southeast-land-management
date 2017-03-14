@@ -12,7 +12,7 @@
 ?>
 
 <div class="list" id="li-<?php echo $count; ?>">
-	<h2 class="li-<?php echo $count; ?>"><?php echo the_title(); ?></h2>
-	<p class="li-<?php echo $count; ?>"><?php echo the_field('dir_title'); ?></p>
+	<h2 class="li-<?php echo $count; ?>"><?php the_title(); ?></h2>
+	<p class="li-<?php echo $count; ?>"><?php the_field('dir_title'); ?></p>
 </div>
 <?php $count++; endwhile; wp_reset_query(); ?>

@@ -19,7 +19,7 @@
 	  while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 		<div class="writeup" id="wu-<?php echo $count; ?>">
-		  <p><?php echo the_content(); ?></p>
+			<p><?php the_content(); ?></p>
 		</div>
 
 	<?php $count++; endwhile; wp_reset_query(); ?>
