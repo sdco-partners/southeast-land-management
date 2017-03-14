@@ -28,7 +28,7 @@ var getMapData = function(location, callback){
     'url': location,
     'dataType': 'json',
     'success': function(data) {
-      console.log('Successfully retrieved map data', data)
+      console.log('Successfully retrieved map data')
       callback(data);
     },
     'fail': function(err) {
@@ -87,7 +87,7 @@ var plotMapData = function (mapData) {
       map: map,
       icon: icon
     });
-
+    mapData[i]['content'] = buildContentString(mapData[i])
     // add click event to markers
     google.maps.event.addListener(marker, 'click', (function(marker, i){
       return function() {
@@ -101,3 +101,24 @@ var plotMapData = function (mapData) {
   }
   
 }
+
+/**
+*
+* buildContentString
+*
+* Takes raw field data from mapData and converts it 
+* into content for infowindow
+*/
+
+var buildContentString = function(data){
+  console.log('data: ', data)
+  var content = '<div id="content">';
+  content += '<p class="info-window">' + data['title'] + '</p>';
+  content += '<p class="info-window">Acres: ' + data['marker_acres'] + ' Parcel: ID ' + data['marker_parcel'] + '</p>';
+  content += '<p class="info-window">County: ' + data['marker_county'] + ' Street: ' + data['marker_street'] + '</p>';
+  content += '<p class="info-window">' + data['marker_broker']+ '</p>';
+  content += '</div>'
+
+  return content;
+}
+

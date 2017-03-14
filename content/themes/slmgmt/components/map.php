@@ -16,7 +16,7 @@
       $coordinates = get_field('marker_points');
       $data_row = array(
       	'lat' => $coordinates['lat'],
-      	'long' => $coordinates['lat'],
+      	'long' => $coordinates['lng'],
       	'market' => get_field('marker_market'),
       	'title' => get_the_title(),
       	'acres' => get_field('marker_acres'),
