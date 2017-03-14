@@ -30,12 +30,3 @@ albert.pickRandomSlide = function(){
   var randomNumber = Math.floor((Math.random() * 4) + 1);
   this.scaleIn(randomNumber);
 }
-
-albert.scrollDown = function() {
-	var bio = $j( '#bio' ).offset();
-  $j( 'html, body' ).animate({
-    "scrollTop": bio.top
-  }, 'slow', 'swing');
-}
-
-$j( '#albert-down' ).on('click', albert.scrollDown);

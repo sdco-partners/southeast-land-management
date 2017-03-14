@@ -19,7 +19,7 @@ var initMap = function() {
 *
 * getMapData
 *
-* Ajax call to read json file and callback to start process
+* Ajax call to read json file and callback to start
 */
 
 var getMapData = function(location, callback){

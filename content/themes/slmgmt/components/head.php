@@ -15,7 +15,7 @@
 </div>
 <div id="slide-menu">
   <ul>
-    <li><a href="<?php echo $GLOBALS['url']; ?>/about">About</a></li>
+    <li><a href="" id="click-about">About</a></li>
     <li><a href="<?php echo $GLOBALS['url']; ?>/communities">Communities</a></li>
     <li><a href="<?php echo $GLOBALS['url']; ?>/contact">Contact</a></li>
   </ul>
