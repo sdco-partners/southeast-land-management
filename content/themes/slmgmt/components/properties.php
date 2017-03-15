@@ -2,75 +2,71 @@
   /**
   * Section =>  About
   */ 
-
 ?>
-
 <div>
 
-	<!-- <h1>Charlotte</h1>
-	<ul>
-		<li>Albemarle</li>
-		<li>Allision Creek</li>
-		<li>Bethel Church</li>
-		<li>Belmont</li>
-		<li>Forbes</li>
-		<li>High Shoals</li>
-		<li>Independence</li>
-		<li>I-85</li>
-		<li>Locust</li>
-		<li>Kidville</li>
-		<li>Stagecoach</li>
-		<li>St. Stephens</li>
-		<li>Orchard</li>
-		<li>Beth Haven Church</li>
-		<li>Lower Rocky River Rd</li>
-		<li>Mill Grove Rd</li>
-		<li>Monroe Bypass</li>
-		<li>Mount Pleasant</li>
-		<li>Long Run Farm Road</li>
-		<li>Speedway</li>
-		<li>New Hope</li>
-		<li>Waxhaw</li>
-		<li>24/27</li>
-	</ul>
+<?php 
+  $args = array(
+     'taxonomy' => 'market',
+     'hide_empty' => false          
+  );
 
-	<h1>Raleigh</h1>
-	<ul>
-		<li>Fuquay</li>
-		<li>Meadowview</li>
-		<li>River Town</li>
-		<li>Durham</li>
-	</ul>
+  $markets = get_terms( $args );
+  foreach ( $markets as $market ) :
 
-	<h1>Myrtle Beach</h1>
-	<ul>
-		<li>Little River</li>
-  </ul>
+?> 
 
-	<h1>Nashville</h1>
-  <ul>
-		<li>Franklin</li>
-		<li>Highway 96</li>
-		<li>I-65</li>  
-		<li>McFarlin</li>
-		<li>I-40</li>
-		<li>Williamson</li>
-  </ul>
+    <h1><?php echo $market->name; ?></h1>
+    <ul>
 
-	<h1>Charleston</h1>
-  <ul>
-		<li>Berkley</li>
-		<li>Jedburg</li> 
-  </ul>
+	  <?php 
+	    $sub_args = array(
+	    	'post_type' => 'properties',
+	    	'posts_per_page' => -1,
+	    	'tax_query' => array(
+	    		array(
+		    		'taxonomy' => 'market',
+		    		'field' => 'slug',
+		    		'terms' => $market->slug,
+	    		),
+    		),
+	    );
 
-	<h1>San Antonio</h1>
-	<ul>
-	  <li>Culebra</li>
-	</ul>
+	    $listings = new WP_Query( $sub_args );
 
-	<h1>Austin</h1>
-	<ul>
-	  <li>Ronald Reagan</li>
-	</ul> -->
+	    if ( $listings->have_posts() ) : while( $listings->have_posts() ) : $listings->the_post();
+	  ?>
+
+      <li class='show'><?php the_title(); ?>
+        <ul class='hide'>
+	        <li>
+	          <span>Acres:</span> <?php echo get_field('marker_acres'); ?>
+	        </li>
+	        <li>
+	         <span>Parcel:</span> <?php echo get_field('marker_parcel'); ?>
+	        </li>
+	        <li>
+	          <span>County:</span> <?php echo get_field('marker_county'); ?>
+	        </li>
+	        <li>
+	          <span>Street:</span> <?php echo get_field('marker_street'); ?>
+	        </li>
+	        <li>
+	          <span>Broker:</span> <?php echo get_field('marker_broker'); ?>
+	         </li>
+        </ul>
+			</li>
+	  <?php  
+
+		  endwhile;endif;
+		?>
+
+    </ul>
+
+<?php  
+  endforeach;
+?>
+
+
 
 </div>

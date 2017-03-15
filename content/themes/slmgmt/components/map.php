@@ -38,11 +38,8 @@
   fwrite($map_data_file, $JSON_encode) or die('Cannot write map data');
   fclose($map_data_file);
 
-
 ?>
 <div id="google-map"></div>
-
-
 
 <script defer 
   src="https://maps.googleapis.com/maps/api/js?key=<?php echo $GLOBALS['maps']; ?>&callback=initMap">
