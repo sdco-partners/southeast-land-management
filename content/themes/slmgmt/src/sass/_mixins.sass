@@ -1,6 +1,6 @@
 /* Media Breakpoints & Mixins */
 
-$break-xlarge: 1280px
+$break-xlarge: 1400px
 $break-large: 1024px
 $break-medium: 850px
 $break-small: 500px
@@ -18,7 +18,7 @@ $break-small: 500px
     @content
 
 =tiny
-  @media(min-width: #{$break-small})
+  @media(max-width: #{$break-small})
     @content
     
 

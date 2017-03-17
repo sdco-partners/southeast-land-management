@@ -92,7 +92,7 @@ var plotMapData = function (mapData) {
       map: map,
       icon: icon
     });
-    mapData[i]['content'] = buildContentString(mapData[i])
+    mapData[i]['content'] = buildContentString(mapData[i]);
     // add click event to markers
     google.maps.event.addListener(marker, 'click', (function(marker, i){
       return function() {
@@ -118,9 +118,9 @@ var plotMapData = function (mapData) {
 var buildContentString = function(data){
   var content = '<div id="content">';
   content += '<p class="info-window">' + data['title'] + '</p>';
-  content += '<p class="info-window">Acres: ' + data['marker_acres'] + ' Parcel: ID ' + data['marker_parcel'] + '</p>';
-  content += '<p class="info-window">County: ' + data['marker_county'] + ' Street: ' + data['marker_street'] + '</p>';
-  content += '<p class="info-window">' + data['marker_broker']+ '</p>';
+  content += '<p class="info-window">Acres: ' + data['acres'] + ' Parcel: ID ' + data['parcel'] + '</p>';
+  content += '<p class="info-window">County: ' + data['county'] + ' Street: ' + data['street'] + '</p>';
+  content += '<p class="info-window">Broker: ' + data['broker'] + ' ID: ' + data['post_id'] + '</p>';
   content += '</div>'
 
   return content;

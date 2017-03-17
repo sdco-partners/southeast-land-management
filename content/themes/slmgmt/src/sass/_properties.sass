@@ -11,8 +11,17 @@
   > div
     column-count: 2
 
-    +medium
+    // +medium
+    //   column-count: 3
+    
+    +large
+      column-count: 3
+
+    +max
       column-count: 5
+
+    +tiny
+      column-count: 1
 
   ul li
     padding-top: 5px 
@@ -21,7 +30,7 @@
 
   ul 
     padding-bottom: 20px 
-
+  
 
   .show
     
@@ -39,15 +48,26 @@
       padding-bottom: 0
       // transition: visibility 0s, opacity 0.3s linear, height 0.3s linear
 
+#key
+  margin-top: -40px
+  margin-bottom: 40px
+
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4 */
 
 #properties
   
-  h1 
-    color: $site-red
-    font-size: $font-sx1
+  h1
+    a  
+      color: $site-red
+      font-size: $font-sx1
+      transition: all 0.3s
+
+      &:hover
+        color: $site-darkgrey
+        // border-top: 1px solid $site-darkgrey
+
 
   ul li 
     @extend .font-goth-b

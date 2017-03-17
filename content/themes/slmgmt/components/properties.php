@@ -2,9 +2,16 @@
   /**
   * Section =>  About
   */ 
-?>
-<div>
 
+?>
+<?php if ( $_SERVER['QUERY_STRING'] ) : ?>
+<h1 id="key">
+  <a class="market" href="<?php echo $GLOBALS['root']; ?>/communities" target="_self">
+	  &larr; Back To Full Map
+	</a>
+</h1>
+<?php endif; ?>
+<div>
 <?php 
   $args = array(
      'taxonomy' => 'market',
@@ -16,7 +23,12 @@
 
 ?> 
 
-    <h1><?php echo $market->name; ?></h1>
+    <h1>
+      <a class="market" target="_self" alt="<?php echo $market->slug;?>"
+      href="<?php echo $GLOBALS['root']?>/communities?market=<?php echo $market->slug;?>">
+        <?php echo $market->name; ?>
+      </a>
+    </h1>
     <ul>
 
 	  <?php 
@@ -39,21 +51,11 @@
 
       <li class='show'><?php the_title(); ?>
         <ul class='hide'>
-	        <li>
-	          <span>Acres:</span> <?php echo get_field('marker_acres'); ?>
-	        </li>
-	        <li>
-	         <span>Parcel:</span> <?php echo get_field('marker_parcel'); ?>
-	        </li>
-	        <li>
-	          <span>County:</span> <?php echo get_field('marker_county'); ?>
-	        </li>
-	        <li>
-	          <span>Street:</span> <?php echo get_field('marker_street'); ?>
-	        </li>
-	        <li>
-	          <span>Broker:</span> <?php echo get_field('marker_broker'); ?>
-	         </li>
+	        <li><span>Acres:</span> <?php echo get_field('marker_acres'); ?></li>
+	        <li><span>Parcel:</span> <?php echo get_field('marker_parcel'); ?></li>
+	        <li><span>County:</span> <?php echo get_field('marker_county'); ?></li>
+	        <li><span>Street:</span> <?php echo get_field('marker_street'); ?></li>
+	        <li><span>Broker:</span> <?php echo get_field('marker_broker'); ?></li>
         </ul>
 			</li>
 	  <?php  

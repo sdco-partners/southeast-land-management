@@ -5,8 +5,32 @@
   
 
   // Create Map Data JSON 
+  $url_query = $_SERVER['QUERY_STRING'];
   $map_data = array();
-  $args = array( 'post_type' => 'properties', 'posts_per_page' => -1  );
+  if ( $url_query ){
+    $city = explode('=', $url_query);
+
+    $args = array( 
+      'post_type' => 'properties', 
+      'posts_per_page' => -1,  
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'market',
+          'field' => 'slug',
+          'terms' => $city[1],
+        ),
+      ),
+    );
+
+    echo "<script>console.log('city selected:', '". $city[1] ."');</script>";
+  } else {
+    $args = array( 
+      'post_type' => 'properties', 
+      'posts_per_page' => -1  
+    );
+
+    echo "<script>console.log('General Map');</script>";
+  }
   $map_query = new WP_Query( $args );
   $count = 1;
   
@@ -23,7 +47,8 @@
       	'parcel' => get_field('marker_parcel'),
       	'county' => get_field('marker_county'),
       	'street' => get_field('marker_street'),
-      	'broker' => get_field('marker_broker')
+      	'broker' => get_field('marker_broker'),
+        'post_id' => get_the_id(),
       );
 
     $map_data[] = $data_row;
@@ -33,7 +58,7 @@
 
   $JSON_encode = json_encode($map_data);
 
-  $path = $_SERVER['DOCUMENT_ROOT'].'/southeast-land-management/content/themes/slmgmt/prod/mapData.json';
+  $path = $GLOBALS['docpath'].'/content/themes/slmgmt/prod/mapData.json';
   $map_data_file = fopen( $path, 'w+');
   fwrite($map_data_file, $JSON_encode) or die('Cannot write map data');
   fclose($map_data_file);

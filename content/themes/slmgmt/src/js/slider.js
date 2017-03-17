@@ -6,7 +6,6 @@
 * @param {children}    :   Base name for child divs that contain each image
 * @param {duration}    :   Interval between each slide animation
 * @param {pauseTime}   :   Pause between runs of sliderFnc
-* @param {selector}    :   change default '$' jQuery selector if using PHP
 *
 */
   
@@ -15,7 +14,6 @@ var Slider = {
   children: '',
   duration: 2000,
   pauseTime: 10000,
-  selector: '$',
   counter: 1,
   clicked: false,
 }
@@ -33,13 +31,13 @@ Slider.toggle = function(){
 Slider.slideFxn = function(){
 
   // Define vocab
-  var totalImages = $j( this.parent ).children().length;
-  var firstPosition = $j( this.children + '-1' ).position().left;
+  var totalImages = this.$( this.parent ).children().length;
+  var firstPosition = this.$( this.children + '-1' ).position().left;
 
   // If count is within image range, account for indent image and use to move left
   if ( this.counter <= totalImages && this.counter > 0 ) {
     
-  	var nextSlide = $j( this.children + '-' + this.counter );
+  	var nextSlide = this.$( this.children + '-' + this.counter );
   	var nextPosition = nextSlide.position().left;
   	var moveTo = nextPosition - firstPosition;
   	this.$( this.parent ).animate({

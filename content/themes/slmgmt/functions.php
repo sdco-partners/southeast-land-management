@@ -17,6 +17,7 @@
   /* Define Variables  */
   $GLOBALS['url'] = get_template_directory_uri();
   $GLOBALS['root'] = 'http://10.1.10.96/southeast-land-management/';
+  $GLOBALS['docpath'] = $_SERVER['DOCUMENT_ROOT'].'/southeast-land-management';
 
 
 
@@ -55,6 +56,13 @@
   function isMobile() {
     return preg_match("/(android|webos|avantgo|iphone|ipad|ipod|blackbe‌​rry|iemobile|bolt|bo‌​ost|cricket|docomo|f‌​one|hiptop|mini|oper‌​a mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|‌​webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
   }
+
+  /**
+  *
+  * emailForm
+  *
+  * sends out email
+  */
 
 
 ?>

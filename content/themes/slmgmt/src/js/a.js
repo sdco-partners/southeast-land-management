@@ -10,21 +10,22 @@ var home = "/southeast-land-management/"
 
 $j(document).ready(function(){
 
-  
+  // Runs main homepage image functionality
   albert.pickRandomSlide();
+  
+  $j( '#albert-down' ).on('click', scrollDown);
 
+  // Runs navigation bar
   $j( '#hamburger' ).on('click', function(e){
     e.preventDefault();
-		open();
+    open();
   })
 
-	$j( '#close' ).on('click', function(e){
-	  e.preventDefault();
-		close();
-	})
-
-  $j( '#albert-down' ).on('click', scrollDown);
-  
+  $j( '#close' ).on('click', function(e){
+    e.preventDefault();
+    close();
+  })
+ 
   $j( '#click-about' ).on('click', function(e){
     if (uri === home ) {
       console.log('default prevented', uri, home);
@@ -34,5 +35,12 @@ $j(document).ready(function(){
   	scrollDown();
   	close();
   });
+  
+  // Runs form functionality
+  $j( 'form' ).on('submit', function(e){
+    e.preventDefault();
+    submitForm();
+  })
+
 
 });
