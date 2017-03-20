@@ -29,12 +29,11 @@
       'posts_per_page' => -1  
     );
 
-    echo "<script>console.log('General Map');</script>";
   }
   $map_query = new WP_Query( $args );
   $count = 1;
   
-
+  $count = 0;
   if ( $map_query->have_posts() ) : while ( $map_query->have_posts() ) : $map_query->the_post();
       
       $coordinates = get_field('marker_points');

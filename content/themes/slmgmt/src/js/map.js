@@ -50,6 +50,9 @@ var getMapData = function(location, callback){
 * Takes Ajax async callback, feteches data and builds
 */
 
+// Array to help access marker methods from front-end
+var markers = {};
+
 var plotMapData = function (mapData) {
 
   // Define Variables
@@ -103,6 +106,7 @@ var plotMapData = function (mapData) {
     
     // fit map to include all markers
     map.fitBounds(bounds);
+    markers[mapData[i]['post_id']] = marker ;
   }
   
 }

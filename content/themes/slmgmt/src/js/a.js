@@ -13,7 +13,9 @@ $j(document).ready(function(){
   // Runs main homepage image functionality
   albert.pickRandomSlide();
   
-  $j( '#albert-down' ).on('click', scrollDown);
+  $j( '#albert-down' ).on('click', function(){
+    scroll('bio');
+  });
 
   // Runs navigation bar
   $j( '#hamburger' ).on('click', function(e){
@@ -28,11 +30,9 @@ $j(document).ready(function(){
  
   $j( '#click-about' ).on('click', function(e){
     if (uri === home ) {
-      console.log('default prevented', uri, home);
       e.preventDefault();
     }
-    console.log('defaulted', uri, home);
-  	scrollDown();
+  	scroll('bio');
   	close();
   });
   
@@ -40,6 +40,13 @@ $j(document).ready(function(){
   $j( 'form' ).on('submit', function(e){
     e.preventDefault();
     submitForm();
+  })
+
+  $j( '.show').on('click', function(e){
+    e.preventDefault();
+    var id = $j(this).attr('id')
+    google.maps.event.trigger(markers[id], 'click');
+    scroll('map');
   })
 
 

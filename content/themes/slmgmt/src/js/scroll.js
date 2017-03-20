@@ -6,10 +6,10 @@
 */
 
 
-var scrollDown = function() {
-	var bio = $j( '#bio' ).offset();
+var scroll = function(element) {
+	var element = $j( '#' + element ).offset();
   $j( 'html, body' ).animate({
-    "scrollTop": bio.top
+    "scrollTop": element.top
   }, 'slow', 'swing');
 }
 

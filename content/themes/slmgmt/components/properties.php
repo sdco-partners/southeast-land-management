@@ -19,6 +19,7 @@
   );
 
   $markets = get_terms( $args );
+  $count = 0;
   foreach ( $markets as $market ) :
 
 ?> 
@@ -49,18 +50,10 @@
 	    if ( $listings->have_posts() ) : while( $listings->have_posts() ) : $listings->the_post();
 	  ?>
 
-      <li class='show'><?php the_title(); ?>
-        <ul class='hide'>
-	        <li><span>Acres:</span> <?php echo get_field('marker_acres'); ?></li>
-	        <li><span>Parcel:</span> <?php echo get_field('marker_parcel'); ?></li>
-	        <li><span>County:</span> <?php echo get_field('marker_county'); ?></li>
-	        <li><span>Street:</span> <?php echo get_field('marker_street'); ?></li>
-	        <li><span>Broker:</span> <?php echo get_field('marker_broker'); ?></li>
-        </ul>
-			</li>
+      <li class='show' id="<?php echo get_the_id(); ?>"><?php the_title(); ?></li>
 	  <?php  
 
-		  endwhile;endif;
+		  $count++;endwhile;endif;
 		?>
 
     </ul>
