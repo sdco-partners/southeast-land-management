@@ -23,18 +23,26 @@ var submitForm = function(event) {
   })
   .done(function(data) {
   	console.log('successfully submitted', data);
-  	$j( '#contact' ).append('<di>Inquiry Submitted! We will be in touch shortly!</h3>');
+  	$j( '#forms' ).append('<h3 id="onSubmit">Inquiry Submitted! We will be in touch shortly!</h3>')
+    
+    setTimeout(function(){
+      $j( '#onSubmit' ).remove();
+    }, 2500);
   })
   .fail(function(err) {
     console.log('error with submission', err );
-    $j( '#contact' ).append('<h3>Sorry, we ran into an error. Please try again!</h3>');
+    $j( '#forms' ).append('<h3 id="onSubmit">Sorry, we ran into an error. Please try again!</h3>')
+
+    setTimeout(function(){
+      $j( '#onSubmit' ).remove();
+    }, 2500);
 
   })
   .always(function(){
     $j( 'input[name=name]' ).val('');
     $j( 'input[name=email]' ).val('');
     $j( 'textarea[name=message]' ).val('');
-  })
+  }) 
 
 
 }
