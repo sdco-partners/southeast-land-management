@@ -31,7 +31,9 @@
     wp_enqueue_style('webtype', 'http://cloud.webtype.com/css/c7d7a6d5-4e15-4b27-bbae-3849f98e1ac4.css');
 
     wp_enqueue_style('styles', $GLOBALS['url'].'/prod/styles.css');
-
+    
+    wp_enqueue_script('underscore', $GLOBALS['url'].'/prod/underscore.js', array('jquery'), '1.0.0', true);
+    
     wp_enqueue_script('scripts-min', $GLOBALS['url'].'/prod/scripts-min.js', array('jquery'), '1.0.0', true);
 
   }
@@ -57,12 +59,38 @@
     return preg_match("/(android|webos|avantgo|iphone|ipad|ipod|blackbe‌​rry|iemobile|bolt|bo‌​ost|cricket|docomo|f‌​one|hiptop|mini|oper‌​a mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|‌​webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
   }
 
+  add_filter( 'wp_mail_from', function($email) {
+    return 'contact@slmgmt.com';
+  });
+
+ add_filter( 'wp_mail_from_name', function($name) {
+    return 'Southeast Land Management';
+  });
+ 
   /**
   *
   * emailForm
   *
   * sends out email
   */
+
+  function emailForm($name, $email, $message) {
+    $email_to = 'asif@sdcopartners.com';
+    $email_subject = 'New Inquiry';
+    $email_message = '<strong>New message from ' . $name . ' at ' . $email .'</strong>'  . '<p>' . $message . '</p>';
+    $email_message = str_replace('\n.', '\n..', $email_message);
+
+    $headers[] = 'MIME-Version: 1.0';
+    $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+    $headers[] = 'From: ' . $email;
+
+    $send = wp_mail($email_to, $email_subject, $email_message, $headers);
+
+    if (!$send) {
+      throw new Exception('Send failed');
+    }
+    return $send;
+  }
 
 
 ?>

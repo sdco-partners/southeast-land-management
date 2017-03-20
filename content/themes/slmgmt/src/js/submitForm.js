@@ -9,9 +9,9 @@
 var submitForm = function(event) {
    
   var formData = {
-   'name': $j( 'input[name=name]' ).val(),
-   'email': $j( 'input[name=email]' ).val(),
-   'message': $j( 'textarea[name=message]' ).val()
+   'name': _.escape( $j( 'input[name=name]' ).val() ),
+   'email': _.escape( $j( 'input[name=email]' ).val() ),
+   'message': _.escape( $j( 'textarea[name=message]' ).val() )
   };
 
   $j.ajax({
@@ -23,9 +23,17 @@ var submitForm = function(event) {
   })
   .done(function(data) {
   	console.log('successfully submitted', data);
+  	$j( '#contact' ).append('<di>Inquiry Submitted! We will be in touch shortly!</h3>');
   })
   .fail(function(err) {
-    console.log('error with submission', err )
+    console.log('error with submission', err );
+    $j( '#contact' ).append('<h3>Sorry, we ran into an error. Please try again!</h3>');
+
+  })
+  .always(function(){
+    $j( 'input[name=name]' ).val('');
+    $j( 'input[name=email]' ).val('');
+    $j( 'textarea[name=message]' ).val('');
   })
 
 

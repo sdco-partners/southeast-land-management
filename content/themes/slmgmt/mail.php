@@ -11,6 +11,8 @@
  * @since 1.0
  * @version 1.0
  */
+  
+  require_once('../../../wordpress/wp-load.php');
 
   $errors = array();
   $data = array();
@@ -18,38 +20,30 @@
 
   // error logging
   if ( empty( $_POST['name'] ) )
-  	$errors['name'] = 'Name is required.';
+    $errors['name'] = 'Name is required.';
 
   if ( empty( $_POST['email'] ) )
-  	$errors['email'] = 'Email is required.';
+    $errors['email'] = 'Email is required.';
 
   if ( empty( $_POST['message'] ) )
-  	$errors['message'] = 'Please include a message.';
+    $errors['message'] = 'Please include a message.';
 
   // if errors ...
   if ( !empty($errors) ) {
-  	$data['success'] = false;
-  	$data['errors'] = $errors;
+    $data['success'] = false;
+    $data['errors'] = $errors;
+    $data['message'] = print_r(error_get_last());
 
   // on success ...
   } else {
-    $data['success'] = true;
-    $data['message'] = 'Success!';
     
-    function emailForm() {
-      $email_to = 'asif@sdcopartners.com';
-      $email_subject = 'New Inquiry from ' . $_POST['name'];
-      $email_message = '<strong>New message from ' . $_POST['name'] . ' at ' . $_POST['email'] .'</strong>'  . '<p>' . $_POST['message'] . '</p>';
-      $email_message = str_replace('\n.', '\n..', $email_message);
+    $data['message'] = 'Message Sent';
 
-      $headers[] = 'MIME-Version: 1.0';
-      $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-      $headers[] = 'From: ' . $_POST['email'];
-
-      mail($email_to, $email_subject, $email_message, implode("\r\n", $headers));
+    try {
+      $data['success'] = emailForm( sanitize_text_field($_POST['name']), sanitize_email($_POST['email']), sanitize_text_field($_POST['message']) );
+    } catch ( Exception $e ) {
+      $data['exceptions'] = $e->getMessage();
     }
-
-    emailForm();
   }
   
   echo json_encode($data);

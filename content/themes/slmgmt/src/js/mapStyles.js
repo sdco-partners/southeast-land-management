@@ -38,7 +38,7 @@ var mapStyles = [
 	},{
 	  featureType: 'road',
 	  elementType: 'geometry',
-	  stylers: [{visibility: 'off'}]
+	  stylers: [{color: '#494B59'}]
 	},{
 	  featureType: 'road',
 	  elementType: 'geometry.stroke',
