@@ -59,7 +59,7 @@ var plotMapData = function (mapData) {
   var content = new google.maps.InfoWindow(), marker, i;
   var pinImgLoc = home + "/content/themes/slmgmt/assets/pin.png";
   var options = {
-    zoom: 6,
+    maxZoom: 11,
     center: {lat: 35.243094, lng: -80.604347},
     disableDoubleClickZoom: true,
     draggable: true,
