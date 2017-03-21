@@ -15,9 +15,16 @@
   margin-right: 15px 
   margin-bottom: 25px
 
+  +browser("Trident")
+    flex: 0 0 40%
+
   +medium
     flex: 0 0 calc(25% - 50px)
     margin-right: 50px 
+
+    +browser("Trident")
+      flex: 0 0 21%
+      margin-right: 30px
 
 
   h2

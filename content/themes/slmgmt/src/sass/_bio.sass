@@ -14,20 +14,24 @@
     height: 800px
 
   > .image
-    flex: 0 0 100vw
+    flex: 0 0 100%
     height: 400px
     overflow: hidden
 
     +medium
-      flex: 0 0 50vw
+      flex: 0 0 50%
       height: 100%
 
   > .copy
-    flex: 0 0 calc(100vw - 20%)
-    padding: 10%
+    flex: 0 0 80%
+    padding-left: 10%
+    padding-right: 10%
+    padding-top: 40px
+    padding-bottom: 40px
 
     +medium
-      flex: 0 0 calc(50vw - 20%)
+      flex: 0 0 30%
+      padding: 10%
 
     > a
       display: block

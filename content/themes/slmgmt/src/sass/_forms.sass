@@ -34,6 +34,7 @@
 
 #f-notes
   padding-top: 15px
+  overflow: hidden
 
 #onSubmit
  text-align: center
@@ -70,12 +71,15 @@
 
 
 #f-fullname, #f-email, #f-notes
+  @extend .font-sweet-m
   color: $site-white
   text-transform: uppercase
   letter-spacing: 0.1em
 
   +placeholder
     color: $site-white
+    font-size: $font-bx1
+
 
 #onSubmit
   @extend .font-chron-di
