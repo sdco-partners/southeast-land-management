@@ -12,6 +12,8 @@
  * @version 1.0
  */
 
+	$img = get_field('explore_photo', 2);
+
   get_header(); ?>
 
 <!-- ==== Section: Main ==== -->
@@ -22,6 +24,12 @@
 <!-- ==== Section: Short Bio ==== -->
 <section id="bio">
   <?php get_template_part('components/bio'); ?>    
+</section>
+
+<!-- ==== Section: Explore ==== -->
+<section id="explore"
+  style="background-image: url(<?php echo $img['url']; ?>)">
+  <?php get_template_part('components/explore'); ?>
 </section>
 
 <!-- ==== Section: Map ==== -->

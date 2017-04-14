@@ -7,7 +7,8 @@
 
 <div id="nav">
   <h1 id="nav-name">
-  	<a href="<?php echo $GLOBALS['root']; ?>">Southeast Land Management</a>
+    <a href="<?php echo $GLOBALS['root']; ?>">Southeast Land Management
+    <span>a south street partners company</span></a>
   </h1>
   <a href="" id="hamburger">
     <?php echo file_get_contents($GLOBALS['url']."/assets/hamburger.svg"); ?>

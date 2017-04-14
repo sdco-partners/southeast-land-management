@@ -26,7 +26,7 @@
 <!-- ==== Section: Explore ==== -->
 <section id="explore"
   style="background-image: url(<?php echo $img['url']; ?>)">
-  <?php get_template_part('components/explore'); ?>
+  <?php // get_template_part('components/explore'); ?>
 </section>
 
 

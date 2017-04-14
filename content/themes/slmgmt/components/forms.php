@@ -6,6 +6,7 @@
 
 ?>
 
+  <?php do_shortcode('[contact-form-7 id="107" title="Inquiries"]'); ?>
 <form>
 	<input id="f-fullname" type="text" placeholder="Name" name="name" required>
 	<input id="f-email" type="email" placeholder="Email" name="email" required>
