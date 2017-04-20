@@ -58,15 +58,7 @@
   function isMobile() {
     return preg_match("/(android|webos|avantgo|iphone|ipad|ipod|blackbe‌​rry|iemobile|bolt|bo‌​ost|cricket|docomo|f‌​one|hiptop|mini|oper‌​a mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|‌​webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
   }
-
-  add_filter( 'wp_mail_from', function($email) {
-    return 'contact@slmgmt.com';
-  });
-
- add_filter( 'wp_mail_from_name', function($name) {
-    return 'Southeast Land Management';
-  });
- 
+  
   /**
   *
   * emailForm

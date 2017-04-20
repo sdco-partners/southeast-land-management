@@ -13,7 +13,7 @@
     <address>
       2820 Selwyn Avenue, Suite 500<br>
       Charlotte, NC 28209<br>
-      704-334-3212
+      <a href="tel:704-334-3212">704-334-3212</a>
     </address>
   </div>
   <div class="col-2">
@@ -23,7 +23,7 @@
     <address>
       345 Freshfields Drive, Suite 210<br>
       Johns Island, SC 29455<br>
-      843-768-9111
+      <a href="tel:704-334-3212">843-768-9111</a>
     </address>
   </div>
 </div>

@@ -6,6 +6,7 @@ var gulp = require("gulp")
 , sourcemaps = require('gulp-sourcemaps')
 , plumber = require('gulp-plumber')
 , notify = require('gulp-notify')
+, babel= require('gulp-babel')
 , livereload = require('gulp-livereload');
 
 
@@ -53,6 +54,9 @@ gulp.task('minify', function() {
 gulp.task('uglify', function() {
 	gulp.src(paths.js)
 		.pipe(plumber(plumberErrorHandler))
+		.pipe(babel({
+        presets: ['es2015']
+		  }))
 		.pipe(concat('scripts-min.js'))
 	  .pipe(uglify())
 	  .pipe(gulp.dest(paths.dest))

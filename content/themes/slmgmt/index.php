@@ -21,16 +21,17 @@
   <?php get_template_part('components/main'); ?> 
 </section>
 
-<!-- ==== Section: Short Bio ==== -->
-<section id="bio">
-  <?php get_template_part('components/bio'); ?>    
-</section>
-
 <!-- ==== Section: Explore ==== -->
 <section id="explore"
   style="background-image: url(<?php echo $img['url']; ?>)">
   <?php get_template_part('components/explore'); ?>
 </section>
+
+<!-- ==== Section: Short Bio ==== -->
+<section id="bio">
+  <?php get_template_part('components/bio'); ?>    
+</section>
+
 
 <!-- ==== Section: Map ==== -->
 <section id="map">

@@ -6,7 +6,7 @@
 */
 
 
-albert = {}
+var albert = {}
 
 albert.scaleIn = function(random) {
 	$j( '#sa-' + random ).fadeIn(1500, function(){

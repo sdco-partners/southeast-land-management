@@ -8,7 +8,7 @@
   padding-top: 75px
   padding-bottom: 20vh
 
-  form
+  form, .wpcf7 form p
     +flex
     flex-direction: column
     width: 80vw
@@ -21,7 +21,7 @@
       flex: 0 0 150px
 
 
-#f-submit 
+#f-submit, .wpcf7-form-control-wrap .textarea-89
   flex: 0 0 40px
   align-self: flex-end
   width: 100px
@@ -32,7 +32,16 @@
   flex: 0 0 50px
   width: 100%
 
-#f-notes
+#f-fullname, #f-email
+  padding-top: 10px
+  padding-bottom: 10px
+  height: 40px
+
+.wpcf7-form-control-wrap.text-26, .wpcf7-form-control-wrap.email-925, .wpcf7-form-control-wrap.textarea-89
+  flex: 0 0 50px
+  width: 100%
+
+#f-notes, 
   padding-top: 15px
   overflow: hidden
 
@@ -41,6 +50,12 @@
  margin-top: 50px
  margin-bottom: -65.5px
 
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors, .wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok
+  margin-left: auto
+  margin-right: auto
+
+.wpcf7-form-control-wrap .wpcf7-not-valid-tip
+  margin-bottom: 10px
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -49,7 +64,7 @@
 #forms
   background-color: $site-darkgrey
 
-  form
+  form, .wpcf7
 
     input, textarea
       background-color: $site-darkgrey
@@ -87,3 +102,17 @@
   letter-spacing: 0.15em
   color: $site-white
 
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors, .wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok
+  @extend .font-sweet-m
+  color: $site-white
+  font-size: $font-sx1
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  border: none
+
+
+.wpcf7-form-control-wrap .wpcf7-not-valid-tip
+  @extend .font-sweet-m
+  color: $site-red
+  font-size: $font-sx3
+  text-transform: uppercase

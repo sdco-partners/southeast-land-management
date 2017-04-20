@@ -17,8 +17,8 @@
 <div id="slide-menu">
   <ul>
     <li><a href="<?php echo $GLOBALS['root']; ?>/#bio" id="click-about">About</a></li>
-    <li><a href="<?php echo $GLOBALS['url']; ?>/communities">Communities</a></li>
-    <li><a href="<?php echo $GLOBALS['url']; ?>/contact">Contact</a></li>
+    <li><a href="<?php echo $GLOBALS['root']; ?>/properties">Properties</a></li>
+    <li><a href="<?php echo $GLOBALS['root']; ?>/contact">Contact</a></li>
   </ul>
   <div id="close">
     <?php echo file_get_contents($GLOBALS['url']."/assets/close.svg"); ?>

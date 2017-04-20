@@ -6,7 +6,7 @@
 ?>
 <?php if ( $_SERVER['QUERY_STRING'] ) : ?>
 <h1 id="key">
-  <a class="market" href="<?php echo $GLOBALS['root']; ?>/communities" target="_self">
+  <a class="market" href="<?php echo $GLOBALS['root']; ?>/properties" target="_self">
 	  &larr; Back To Full Map
 	</a>
 </h1>
@@ -26,7 +26,7 @@
 
     <h1>
       <a class="market" target="_self" alt="<?php echo $market->slug;?>"
-      href="<?php echo $GLOBALS['root']?>/communities?market=<?php echo $market->slug;?>">
+      href="<?php echo $GLOBALS['root']?>/properties?market=<?php echo $market->slug;?>">
         <?php echo $market->name; ?>
       </a>
     </h1>
