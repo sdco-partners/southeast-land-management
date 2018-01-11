@@ -10,8 +10,10 @@ var initMap = function(data) {
   // Define Variables
   var mapDataLoc = home + '/content/themes/slmgmt/prod/mapData.json';
   
+  data = mapData ? mapData : null;
+
   if (data) {
-    
+    plotMapData(data);
   } else {
     getMapData(mapDataLoc, plotMapData);
   }
@@ -33,7 +35,7 @@ var getMapData = function(location, callback){
     'url': location,
     'dataType': 'json',
     'success': function(data) {
-      console.log('Successfully retrieved map data')
+      console.log('Successfully retrieved map data', data)
       callback(data);
     },
     'fail': function(err) {
@@ -120,11 +122,12 @@ var plotMapData = function (mapData) {
 */
 
 var buildContentString = function(data){
+
   var content = '<div id="content">';
   content += '<p class="info-window">' + data['title'] + '</p>';
   content += '<p class="info-window">Acres: ' + data['acres'] + ' Parcel: ID ' + data['parcel'] + '</p>';
   content += '<p class="info-window">County: ' + data['county'] + ' Street: ' + data['street'] + '</p>';
-  content += '<p class="info-window">Broker: ' + data['broker'] + ' ID: ' + data['post_id'] + '</p>';
+  content += '<p class="info-window">Broker: ' + '<a class="maplink" href="' + data['url'] + '" target="_blank">' + data['broker'] + '</a> ID: ' + data['post_id'] + '</p>';
   content += '</div>'
 
   return content;

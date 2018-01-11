@@ -16,7 +16,7 @@
 
   /* Define Variables  */
   $GLOBALS['url'] = get_template_directory_uri();
-  $GLOBALS['root'] = 'http://10.1.10.96/southeast-land-management/';
+  $GLOBALS['root'] = 'http://localhost/southeast-land-management';
   $GLOBALS['docpath'] = $_SERVER['DOCUMENT_ROOT'].'/southeast-land-management';
 
 

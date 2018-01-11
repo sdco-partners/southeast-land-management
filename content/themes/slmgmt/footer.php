@@ -19,7 +19,7 @@
   <?php get_template_part('components/foot'); ?>
 </section>
 
-</body><!-- end -->
+</body><!-- end  -->
 </html>
 
 <?php wp_footer(); ?>

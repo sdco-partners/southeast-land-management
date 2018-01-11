@@ -5,8 +5,15 @@
 */
 
 var $j = jQuery.noConflict();
-var uri = window.location.pathname
-var home = "/southeast-land-management/"
+var uri = window.location.pathname;
+var href = window.location.href;
+var devUrl = 'southeast-land-management';
+var home;
+if (href.indexOf(devUrl) !== -1) {
+  home = "/southeast-land-management/"
+} else {
+  home = "";
+}
 
 $j(document).ready(function(){
 

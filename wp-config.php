@@ -88,7 +88,7 @@ define('WPLANG', '');
  * These are required because wordpress is installed in a subdirectory.
  */
 
-$local_path = '10.1.10.96/southeast-land-management';
+$local_path = 'localhost/southeast-land-management';
 // $_SERVER['SERVER_NAME']
 
 if (!defined('WP_SITEURL')) {
